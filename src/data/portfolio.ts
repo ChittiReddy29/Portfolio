@@ -14,11 +14,11 @@ const jade: Palette = { from: '#03150f', via: '#0d5a40', to: '#050a08', accent: 
 
 export const profile = {
   fullName: 'Vempada Pola Venkata Kanaka Durga Chitti B',
-  displayName: 'Chitti B Vempada',
-  firstName: 'CHITTI B',
+  displayName: 'Chitti Babu Vempada',
+  firstName: 'CHITTI BABU',
   seriesTag: 'THE SERIES',
   /** Fictional studio card shown at the very start of the opening sequence. */
-  originalLabel: 'A CHITTI B ORIGINAL',
+  originalLabel: 'A CHITTI BABU ORIGINAL',
   role: 'Full Stack & ServiceNow Developer',
   tagline: ['Full Stack Developer', 'React.js & Spring Boot', 'Cloud & DevOps (AWS)', 'Certified ServiceNow Developer'],
   intro:
@@ -671,7 +671,7 @@ export const viewerProfiles: {
 }[] = [
   {
     id: 'chitti',
-    name: 'Chitti B',
+    name: 'Chitti Babu',
     blurb: 'The full series, in order',
     color: '#e5132b',
     order: ['about', 'journey', 'originals', 'picks', 'skills', 'moments', 'story'],
