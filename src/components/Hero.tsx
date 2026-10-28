@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion, useMotionValue, useScroll, useSpring, useTransform } from 'framer-motion';
-import { achievements, certifications, education, profile, projects, type ProfileId } from '../data/portfolio';
+import { profile, projects, type ProfileId } from '../data/portfolio';
 import { useFinePointer } from '../hooks/useMedia';
 import { useSmoothScroll } from '../hooks/smoothScroll';
 import { EASE, Magnetic, Particles } from './fx';
@@ -37,16 +37,16 @@ export default function Hero({ onPlay, onResume, profileId }: { onPlay: () => vo
   const glowX = useTransform(px, [-1, 1], ['-6%', '6%']);
 
   const meta = [
-    education[0].period.split(' – ')[0].split(' ')[1] + ' – Present',
-    'B.Tech AI & ML',
+    'Mar 2026 – Present',
+    'Sandspace Tech',
     `${projects.length} Originals`,
-    `${certifications.length} Certifications`,
+    'ITSM & Flow Designer',
   ];
 
   const floating = [
-    { text: education[0].score, sub: 'B.Tech AI & ML', pos: 'left-[2%] top-[30%]', depth: 1 },
-    { text: `${achievements[0].title}`, sub: achievements[0].org, pos: 'right-[0%] top-[18%]', depth: -1 },
-    { text: 'Java · React · Node.js', sub: 'Primary stack', pos: 'right-[4%] bottom-[24%]', depth: 0.6 },
+    { text: '40% Latency Cut', sub: 'TEGA Platform', pos: 'left-[2%] top-[30%]', depth: 1 },
+    { text: 'ServiceNow Certified', sub: 'ITSM · Flow Designer', pos: 'right-[0%] top-[18%]', depth: -1 },
+    { text: 'React · Spring Boot · AWS', sub: 'Production Stack', pos: 'right-[4%] bottom-[24%]', depth: 0.6 },
   ];
 
   return (
@@ -127,11 +127,13 @@ export default function Hero({ onPlay, onResume, profileId }: { onPlay: () => vo
           {profile.seriesTag}
         </motion.p>
 
-        <motion.div variants={item} className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 text-[13px] font-medium text-mist">
-          <span className="rounded border border-white/25 px-1.5 py-px text-[10px] font-bold tracking-wider text-bone">AI·ML</span>
-          {meta.map((m, i) => (
-            <span key={m} className="flex items-center gap-3">
-              {i > 0 && <span className="h-1 w-1 rounded-full bg-smoke" />}
+        <motion.div variants={item} className="mt-5 flex flex-wrap items-center gap-x-2.5 gap-y-2 text-[13px] font-medium text-mist">
+          <span className="rounded border border-crimson-2/60 bg-crimson-2/15 px-2 py-0.5 text-[10px] font-bold tracking-wider text-bone">FULL STACK</span>
+          <span className="rounded border border-[#4cc9ff]/50 bg-[#4cc9ff]/10 px-2 py-0.5 text-[10px] font-bold tracking-wider text-[#4cc9ff]">AWS CLOUD</span>
+          <span className="rounded border border-[#46e3a8]/50 bg-[#46e3a8]/10 px-2 py-0.5 text-[10px] font-bold tracking-wider text-[#46e3a8]">SERVICENOW</span>
+          {meta.map((m) => (
+            <span key={m} className="flex items-center gap-2.5">
+              <span className="h-1 w-1 rounded-full bg-smoke" />
               {m}
             </span>
           ))}
